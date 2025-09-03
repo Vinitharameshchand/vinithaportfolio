@@ -30,16 +30,18 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
-  box-shadow: 0 16px 14px 0 #04152d;
-  padding: 18px 24px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-dark) 100%);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+  padding: 20px 26px;
   max-width: 345px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 107, 107, 0.2);
 }
 
 .projectCard:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.5);
 }
 
 .image {
@@ -79,11 +81,18 @@
 
 .skill {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 100px;
-  background: var(--color-dark);
+  background: rgba(139, 69, 19, 0.8);
   padding: 8px 16px;
   color: var(--color-text);
+  border: 1px solid rgba(253, 203, 110, 0.3);
+  transition: background 0.3s ease;
+}
+
+.skill:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
 }
 
 .links {

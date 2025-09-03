@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Background Demo</title>
+    <link rel="stylesheet" href="vars.css">
+    <link rel="stylesheet" href="aesthetic-backgrounds.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', Arial, sans-serif;
+            color: var(--color-text);
+        }
+        
+        .demo-section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .demo-content {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 600px;
+            z-index: 10;
+        }
+        
+        .demo-content h2 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        
+        .demo-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            display: flex;
+            gap: 1rem;
+            background: rgba(10, 14, 26, 0.8);
+            padding: 1rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-btn {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn.active {
+            background: var(--color-accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Option 1: Northern Lights -->
+    <section class="demo-section bg-northern-lights" id="bg1">
+        <div class="demo-content">
+            <h2>Northern Lights</h2>
+            <p>A smooth gradient that flows like the aurora borealis, with subtle dot patterns that create depth and movement. Perfect for creating an elegant, mystical atmosphere.</p>
+        </div>
+    </section>
+
+    <!-- Background Option 2: Cosmic Dust -->
+    <section class="demo-section bg-cosmic" id="bg2">
+        <div class="demo-content">
+            <h2>Cosmic Dust</h2>
+            <p>Deep space vibes with twinkling star-like particles. The gradient creates depth while the animated particles add life to the background without being distracting.</p>
+        </div>
+    </section>
+
+    <!-- Background Option 3: Deep Ocean -->
+    <section class="demo-section bg-deep-ocean" id="bg3">
+        <div class="demo-content">
+            <h2>Deep Ocean</h2>
+            <p>Inspired by the depths of the ocean, with subtle wave-like movements and layered gradients that create a sense of depth and tranquility.</p>
+        </div>
+        <div class="floating-circle large top-right"></div>
+        <div class="floating-circle medium bottom-left"></div>
+    </section>
+
+    <!-- Background Option 4: Midnight Mesh -->
+    <section class="demo-section bg-midnight-mesh" id="bg4">
+        <div class="demo-content">
+            <h2>Midnight Mesh</h2>
+            <p>A modern mesh gradient approach that's subtle yet sophisticated. The overlapping gradients create visual interest without overwhelming your content.</p>
+        </div>
+    </section>
+
+    <!-- Background Option 5: Glass Morphism -->
+    <section class="demo-section bg-glass" id="bg5">
+        <div class="demo-content">
+            <h2>Glass Morphism</h2>
+            <p>Modern frosted glass effect with a blur filter. This creates a contemporary look that's perfect for showcasing content with elegant transparency.</p>
+        </div>
+        <div class="floating-circle small top-left"></div>
+        <div class="floating-circle small center-right"></div>
+    </section>
+
+    <!-- Background Option 6: Geometric -->
+    <section class="demo-section bg-geometric" id="bg6">
+        <div class="demo-content">
+            <h2>Geometric Patterns</h2>
+            <p>Abstract geometric shapes that slowly shift and rotate, creating a dynamic yet subtle background that adds visual interest without distraction.</p>
+        </div>
+    </section>
+
+    <!-- Background Option 7: Gradient Mesh -->
+    <section class="demo-section bg-gradient-mesh" id="bg7">
+        <div class="demo-content">
+            <h2>Gradient Mesh</h2>
+            <p>Smooth gradient mesh with a subtle grid overlay. This creates a professional, clean look that's perfect for portfolios and business presentations.</p>
+        </div>
+        <div class="floating-circle medium top-right"></div>
+    </section>
+
+    <nav class="navigation">
+        <button class="nav-btn active" onclick="scrollToSection('bg1')">Northern</button>
+        <button class="nav-btn" onclick="scrollToSection('bg2')">Cosmic</button>
+        <button class="nav-btn" onclick="scrollToSection('bg3')">Ocean</button>
+        <button class="nav-btn" onclick="scrollToSection('bg4')">Midnight</button>
+        <button class="nav-btn" onclick="scrollToSection('bg5')">Glass</button>
+        <button class="nav-btn" onclick="scrollToSection('bg6')">Geometric</button>
+        <button class="nav-btn" onclick="scrollToSection('bg7')">Mesh</button>
+    </nav>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Update active button
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Update active button on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.demo-section');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navButtons.forEach((btn, index) => {
+                btn.classList.remove('active');
+                const sectionIds = ['bg1', 'bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7'];
+                if (sectionIds[index] === current) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

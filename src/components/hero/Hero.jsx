@@ -1,47 +1,3 @@
-// import React from 'react';
-// import Styles from './hero.module.css';
-// import { getImageUrl } from '../../../utlis';
-
-// export const hero = () => {
-//   return ( <section className={Styles.container}>
-//     <div className={Styles.content}><h1 className={Styles.title}>HIII , I'm vinitha</h1>
-//     <p className={Styles.description}> I'm a student </p>
-//     <a href="mailto:vinitharameshchand@gmail.com" className={Styles.contactBtn}>email mee</a>
-//      </div>
-//      <img src={getImageUrl("/assets/hero/vinitha.jpg")} alt="its my image" className={Styles.heroimage} />
-//      <div className={Styles.topBlur}/>
-//      <div className={Styles.bottomBlur}/>
-//   </section>
-//   )
-// }
-
-// import React from 'react';
-// import Styles from './hero.module.css';
-// import { getImageUrl } from '../../../utlis';
-
-// // ✅ Capitalized component name
-// export const Hero = () => {
-//   return (
-//     <section className={Styles.container}>
-//       <div className={Styles.content}>
-//         <h1 className={Styles.title}>HIII, I'm Vinitha</h1>
-//         <p className={Styles.description}>I'm a student</p>
-//         <a href="mailto:vinitharameshchand@gmail.com" className={Styles.contactBtn}>Email Me</a>
-//       </div>
-
-//       {/* ✅ Image path corrected */}
-//       <img
-//         src={getImageUrl('assets/hero/vinitha.jpg')}
-//         alt="It's my image"
-//         className={Styles.heroimage}
-//       />
-
-//       <div className={Styles.topBlur} />
-//       <div className={Styles.bottomBlur} />
-//     </section>
-//   );
-// };
-
 import React from 'react';
 import Styles from './hero.module.css';
 
@@ -49,11 +5,13 @@ import Styles from './hero.module.css';
 export const Hero = () => {
   return (
     <section className={Styles.container}>
+      <img src="/assets/hero/heroImage.png" alt="It's my image" className={Styles.heroImage} />
+      
       <div className={Styles.content}>
-        <p className={Styles.title}>HIII , I'm Vinitha</p>
-        <p className={Styles.description}><i>Turning coffee ☕ into code <br></br>and ideas into apps 💻 . </i><br></br>~Always learner </p>
+        <p className={Styles.title}>Hey there! 👋 I'm Vinitha ✨</p>
+        <p className={Styles.description}><i>Turning coffee ☕ into code and dreams into digital reality 🚀<br></br>Frontend developer by day, creative problem-solver by night 🌙<br></br>Always learning, always laughing! 😄📚</i></p>
         <a href="mailto:vinitharameshchand@gmail.com" className={Styles.contactBtn}>
-          Email Me
+          📧 Let's Chat!
         </a>
         <br></br>
         <div className={Styles.linkedin} ></div>
@@ -63,7 +21,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
             className={Styles.contactBtn}
           >
-            LinkedIn
+            👤 Connect on LinkedIn
           </a>
           <br>
           </br>
@@ -73,11 +31,39 @@ export const Hero = () => {
 
 
       </div>
-
-      <img src="/assets/hero/heroImage.png" alt="It's my image" className={Styles.heroImage} />
-      <img src='/assets/hero/heroImage2.png' alt="its again me" className={Styles.heroImage2} />
       
-
+      {/* Bright colorful butterflies */}
+      <div className={Styles.butterfly} data-butterfly="1">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="2">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="3">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="4">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="5">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="6">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="7">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="8">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="9">
+        <span>🦋</span>
+      </div>
+      <div className={Styles.butterfly} data-butterfly="10">
+        <span>🦋</span>
+      </div>
+      
       <div className={Styles.topBlur} />
       <div className={Styles.bottomBlur} />
     </section>

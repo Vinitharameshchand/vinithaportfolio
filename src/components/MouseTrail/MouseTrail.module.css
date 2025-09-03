@@ -1,0 +1,244 @@
+@import "../../vars.css";
+
+.mouseTrailContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Custom Star Cursor */
+.customCursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10001;
+  transition: all 0.2s ease-out;
+}
+
+.starShape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  font-size: 20px;
+  animation: starRotate 3s linear infinite, starPulse 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 107, 107, 0.8));
+}
+
+.cursorRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ringPulse 1.5s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.cursorDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+@keyframes starRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes ringPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.2;
+  }
+}
+
+/* Cursor Glow Effect */
+.cursorGlow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10000;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+/* Particle Trail */
+.particle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-accent));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  animation: fadeOut 1s ease-out forwards;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+
+/* Interactive Sparkles */
+.sparkle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  animation: sparkleEffect 0.8s ease-out forwards;
+}
+
+@keyframes sparkleEffect {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5) rotate(360deg);
+  }
+}
+
+/* Hover Effects for Interactive Elements */
+.mouseTrailContainer:hover .customCursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: radial-gradient(circle, var(--color-accent) 0%, var(--color-primary) 100%);
+  box-shadow: 0 0 25px rgba(253, 203, 110, 0.8);
+}
+
+/* Special Effects for Buttons and Links */
+body:has(a:hover, button:hover) .customCursor {
+  transform: translate(-50%, -50%) scale(1.8);
+}
+
+body:has(a:hover, button:hover) .starShape {
+  font-size: 28px;
+  animation: starRotate 1s linear infinite, starPulse 0.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 15px rgba(253, 203, 110, 1));
+}
+
+body:has(a:hover, button:hover) .cursorRing {
+  border-color: var(--color-accent);
+  border-width: 3px;
+  animation: ringPulse 0.8s ease-in-out infinite;
+}
+
+body:has(a:hover, button:hover) .cursorDot {
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 15px var(--color-accent);
+}
+
+body:has(a:hover, button:hover) .cursorGlow {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(253, 203, 110, 0.3) 0%, transparent 70%);
+}
+
+/* Rainbow trail effect */
+.particle:nth-child(5n+1) {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+}
+
+.particle:nth-child(5n+2) {
+  background: linear-gradient(45deg, #ff8e53, #fdcb6e);
+}
+
+.particle:nth-child(5n+3) {
+  background: linear-gradient(45deg, #fdcb6e, #6c5ce7);
+}
+
+.particle:nth-child(5n+4) {
+  background: linear-gradient(45deg, #6c5ce7, #fd79a8);
+}
+
+.particle:nth-child(5n+5) {
+  background: linear-gradient(45deg, #fd79a8, #00cec9);
+}
+
+/* Mobile - Hide mouse effects */
+@media (max-width: 768px), (hover: none) {
+  .mouseTrailContainer {
+    display: none;
+  }
+}
+
+/* Disable default cursor */
+body {
+  cursor: none;
+}
+
+/* Re-enable cursor for specific elements when needed */
+input, textarea, [contenteditable] {
+  cursor: text !important;
+}
+
+/* Enhanced effects for special areas */
+.mouseTrailContainer:has(~ .hero-section:hover) .customCursor {
+  background: radial-gradient(circle, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.8), 0 0 40px rgba(253, 203, 110, 0.4);
+}

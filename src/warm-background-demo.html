@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warm Aesthetic Background Demo</title>
+    <link rel="stylesheet" href="warm-aesthetic-backgrounds.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .demo-section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        .demo-content {
+            text-align: center;
+            max-width: 700px;
+            z-index: 10;
+        }
+        
+        .demo-content h2 {
+            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .demo-content p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .color-palette {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .navigation {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            background: rgba(45, 27, 27, 0.8);
+            padding: 1rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-btn {
+            background: var(--warm-coral);
+            color: white;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-align: left;
+            min-width: 120px;
+        }
+        
+        .nav-btn:hover {
+            background: var(--warm-orange);
+            transform: translateX(-3px);
+        }
+        
+        .nav-btn.active {
+            background: var(--warm-gold);
+            color: var(--warm-dark);
+        }
+        
+        @media (max-width: 768px) {
+            .navigation {
+                position: fixed;
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                top: auto;
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 0.8rem;
+            }
+            
+            .nav-btn {
+                min-width: 100px;
+                font-size: 0.75rem;
+                padding: 0.5rem 0.8rem;
+            }
+            
+            .demo-content h2 {
+                font-size: 2.2rem;
+            }
+            
+            .demo-content p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Option 1: Sunset Glow -->
+    <section class="demo-section bg-sunset-glow" id="bg1">
+        <div class="demo-content warm-text-overlay">
+            <h2>Sunset Glow</h2>
+            <p>Warm, welcoming gradients that flow like a beautiful sunset. Perfect for personal portfolios that want to create an inviting, friendly atmosphere. The gentle animation adds life without distraction.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #ff9a56;"></div>
+                <div class="color-swatch" style="background: #ff6b6b;"></div>
+                <div class="color-swatch" style="background: #ee5a52;"></div>
+                <div class="color-swatch" style="background: #d63031;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Option 2: Autumn Leaves -->
+    <section class="demo-section bg-autumn-leaves" id="bg2">
+        <div class="demo-content warm-text-overlay">
+            <h2>Autumn Leaves</h2>
+            <p>Sophisticated warm gradient inspired by fall colors. The subtle floating elements mimic leaves drifting in the breeze, creating a poetic, artistic feel perfect for creative portfolios.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #ff9a56;"></div>
+                <div class="color-swatch" style="background: #ff7675;"></div>
+                <div class="color-swatch" style="background: #e84393;"></div>
+                <div class="color-swatch" style="background: #a29bfe;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Option 3: Terracotta Dreams -->
+    <section class="demo-section bg-terracotta-dreams" id="bg3">
+        <div class="demo-content warm-text-light">
+            <h2>Terracotta Dreams</h2>
+            <p>Earthy, grounded tones that evoke pottery and natural materials. The subtle grid pattern adds structure while maintaining the organic, handcrafted feel. Perfect for artisans and designers.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #ffeaa7;"></div>
+                <div class="color-swatch" style="background: #fab1a0;"></div>
+                <div class="color-swatch" style="background: #e17055;"></div>
+                <div class="color-swatch" style="background: #d63031;"></div>
+                <div class="color-swatch" style="background: #8b4513;"></div>
+            </div>
+        </div>
+        <div class="warm-floating-circle coral large top-right"></div>
+        <div class="warm-floating-circle peach medium bottom-left"></div>
+    </section>
+
+    <!-- Background Option 4: Coral Breeze -->
+    <section class="demo-section bg-coral-breeze" id="bg4">
+        <div class="demo-content warm-text-light">
+            <h2>Coral Breeze</h2>
+            <p>Soft and inviting coral tones that breathe with gentle movement. The mesh gradients create depth while maintaining a light, airy feel. Ideal for lifestyle and wellness portfolios.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #ff6b6b;"></div>
+                <div class="color-swatch" style="background: #ff9a56;"></div>
+                <div class="color-swatch" style="background: #ffeaa7;"></div>
+            </div>
+        </div>
+        <div class="warm-floating-circle coral small top-center"></div>
+        <div class="warm-floating-circle gold small center-left"></div>
+    </section>
+
+    <!-- Background Option 5: Warm Minimalist -->
+    <section class="demo-section bg-warm-minimal" id="bg5">
+        <div class="demo-content" style="color: var(--warm-dark);">
+            <h2>Warm Minimalist</h2>
+            <p>Clean and minimal with subtle warm undertones. Perfect for professional portfolios that want sophistication without coldness. The gentle radial accents add just enough visual interest.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #faf7f2;"></div>
+                <div class="color-swatch" style="background: #f5f3f0;"></div>
+                <div class="color-swatch" style="background: #ddd6d6;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Option 6: Rustic Charm -->
+    <section class="demo-section bg-rustic-charm" id="bg6">
+        <div class="demo-content warm-text-overlay">
+            <h2>Rustic Charm</h2>
+            <p>Deep, rich warm tones with subtle texture. The diagonal pattern adds visual interest while the earthy colors create a cozy, handcrafted atmosphere. Perfect for artisans and vintage-inspired brands.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #2d1b1b;"></div>
+                <div class="color-swatch" style="background: #8b4513;"></div>
+                <div class="color-swatch" style="background: #cd5c5c;"></div>
+                <div class="color-swatch" style="background: #e17055;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background Option 7: Golden Hour -->
+    <section class="demo-section bg-golden-hour" id="bg7">
+        <div class="demo-content" style="color: var(--warm-dark);">
+            <h2>Golden Hour</h2>
+            <p>Soft, ethereal light reminiscent of the magic hour just before sunset. The gentle shimmer and warm mesh gradients create an elegant, dreamy atmosphere perfect for photographers and artists.</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #ff6b6b;"></div>
+                <div class="color-swatch" style="background: #e17055;"></div>
+                <div class="color-swatch" style="background: #faf7f2;"></div>
+                <div class="color-swatch" style="background: #ffeaa7;"></div>
+            </div>
+        </div>
+        <div class="warm-floating-circle gold medium top-right"></div>
+        <div class="warm-floating-circle peach large bottom-left"></div>
+    </section>
+
+    <nav class="navigation">
+        <button class="nav-btn active" onclick="scrollToSection('bg1')">Sunset Glow</button>
+        <button class="nav-btn" onclick="scrollToSection('bg2')">Autumn Leaves</button>
+        <button class="nav-btn" onclick="scrollToSection('bg3')">Terracotta Dreams</button>
+        <button class="nav-btn" onclick="scrollToSection('bg4')">Coral Breeze</button>
+        <button class="nav-btn" onclick="scrollToSection('bg5')">Warm Minimal</button>
+        <button class="nav-btn" onclick="scrollToSection('bg6')">Rustic Charm</button>
+        <button class="nav-btn" onclick="scrollToSection('bg7')">Golden Hour</button>
+    </nav>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // Update active button
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Update active button on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.demo-section');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navButtons.forEach((btn, index) => {
+                btn.classList.remove('active');
+                const sectionIds = ['bg1', 'bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7'];
+                if (sectionIds[index] === current) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+
+        // Add some interactive elements
+        document.addEventListener('mousemove', (e) => {
+            const floatingElements = document.querySelectorAll('.warm-floating-circle');
+            floatingElements.forEach((element, index) => {
+                const speed = (index + 1) * 0.002;
+                const x = e.clientX * speed;
+                const y = e.clientY * speed;
+                element.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
+</body>
+</html>

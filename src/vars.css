@@ -1,11 +1,24 @@
  :root{
-    /* colors */
-    --color-text : #fff;
-    --color-primary : #576cbc;
-    --color-secondary : #19376d;
-    --color-dark: #0b2447;
-    --color-bg: #04152d;
+    /* colors - Warm Theme */
+    --color-text : #ffffff;  /* Pure white for text */
+    --color-primary : #ff6b6b;  /* Warm coral */
+    --color-secondary : #e17055; /* Warm orange */
+    --color-dark: #8b4513;  /* Warm brown */
+    --color-bg: #2d1b1b;  /* Warm dark background */
+    --color-accent: #fdcb6e;  /* Warm gold accent */
+    --color-light: #ffeaa7;  /* Warm cream */
 
+    /* Enhanced Background Colors */
+    --bg-gradient-1: linear-gradient(135deg, #2d1b1b 0%, #8b4513 25%, #cd5c5c 50%, #e17055 75%, #ff6b6b 100%);
+    --bg-gradient-2: radial-gradient(ellipse at top, #8b4513 0%, #cd5c5c 30%, #2d1b1b 70%);
+    --bg-gradient-3: linear-gradient(-45deg, #2d1b1b, #8b4513, #cd5c5c, #e17055);
+    --bg-animated: linear-gradient(-45deg, #2d1b1b, #8b4513, #cd5c5c, #e17055, #ff6b6b);
+    
+    /* Subtle Pattern Overlays */
+    --dot-pattern: radial-gradient(circle, rgba(255, 107, 107, 0.1) 1px, transparent 1px);
+    --grid-pattern: linear-gradient(90deg, rgba(225, 112, 85, 0.03) 1px, transparent 1px),
+                    linear-gradient(rgba(225, 112, 85, 0.03) 1px, transparent 1px);
+    
     /* fonts */
     --font-robot:"roboto";    
 

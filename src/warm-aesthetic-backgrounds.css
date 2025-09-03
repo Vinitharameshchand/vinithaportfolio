@@ -1,0 +1,342 @@
+/* Warm Aesthetic Background Collection
+   Designed to complement warm tones: reds, oranges, browns, and earth tones
+   Perfect for portraits and personal portfolios with warm color schemes
+*/
+
+:root {
+  /* Warm color palette inspired by the image */
+  --warm-red: #d63031;
+  --warm-orange: #e17055;
+  --warm-brown: #8b4513;
+  --warm-terracotta: #cd5c5c;
+  --warm-rust: #b7472a;
+  --warm-coral: #ff6b6b;
+  --warm-peach: #ffb3a7;
+  --warm-cream: #ffeaa7;
+  --warm-beige: #ddd6d6;
+  --warm-gold: #fdcb6e;
+  
+  /* Neutral warm tones */
+  --warm-white: #fefefe;
+  --warm-off-white: #faf7f2;
+  --warm-light-gray: #f5f3f0;
+  --warm-medium-gray: #8e7b7b;
+  --warm-dark: #2d1b1b;
+  
+  /* Warm gradient backgrounds */
+  --gradient-sunset: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 35%, #ee5a52 65%, #d63031 100%);
+  --gradient-autumn: linear-gradient(to bottom, #ff9a56, #ff7675, #e84393, #a29bfe);
+  --gradient-terracotta: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 25%, #e17055 50%, #d63031 75%, #8b4513 100%);
+  --gradient-warm-earth: linear-gradient(to right, #8b4513, #cd5c5c, #e17055, #ff9a56);
+  --gradient-coral-dream: linear-gradient(to bottom, #ff6b6b, #ff9a56, #ffeaa7);
+  --gradient-rustic: linear-gradient(135deg, #2d1b1b 0%, #8b4513 35%, #cd5c5c 65%, #e17055 100%);
+  --gradient-warm-minimal: linear-gradient(to bottom, #faf7f2, #f5f3f0, #ddd6d6);
+  
+  /* Mesh gradients for warm tones */
+  --warm-mesh-1: radial-gradient(at 30% 20%, #ff6b6b 0%, #e17055 40%, #faf7f2 80%);
+  --warm-mesh-2: radial-gradient(at 70% 80%, rgba(255, 107, 107, 0.3) 0%, transparent 50%),
+                 radial-gradient(at 20% 30%, rgba(225, 112, 85, 0.4) 0%, transparent 50%);
+  
+  /* Warm patterns */
+  --warm-dots: radial-gradient(circle at center, rgba(214, 48, 49, 0.15) 2px, transparent 2px);
+  --warm-subtle-grid: linear-gradient(rgba(225, 112, 85, 0.08) 1px, transparent 1px),
+                     linear-gradient(90deg, rgba(225, 112, 85, 0.08) 1px, transparent 1px);
+  --warm-diagonal: repeating-linear-gradient(45deg, 
+                   rgba(255, 107, 107, 0.05) 0px, 
+                   rgba(255, 107, 107, 0.05) 1px, 
+                   transparent 1px, 
+                   transparent 12px);
+}
+
+/* ======= WARM BACKGROUND OPTIONS ======= */
+
+/* 1. Sunset Glow - Perfect for warm, welcoming portfolios */
+.bg-sunset-glow {
+  background: var(--gradient-sunset);
+  background-size: 400% 400%;
+  animation: warmGlow 18s ease infinite;
+  position: relative;
+}
+
+.bg-sunset-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--warm-dots);
+  background-size: 25px 25px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+@keyframes warmGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Autumn Leaves - Sophisticated warm gradient */
+.bg-autumn-leaves {
+  background: var(--gradient-autumn);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-autumn-leaves::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 154, 86, 0.2) 0%, transparent 30%),
+    radial-gradient(circle at 75% 75%, rgba(214, 48, 49, 0.15) 0%, transparent 30%);
+  animation: leafDrift 20s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes leafDrift {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+/* 3. Terracotta Dreams - Earthy, grounded feel */
+.bg-terracotta-dreams {
+  background: var(--gradient-terracotta);
+  background-size: 300% 300%;
+  animation: earthyShift 25s ease infinite;
+  position: relative;
+}
+
+.bg-terracotta-dreams::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--warm-subtle-grid);
+  background-size: 35px 35px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@keyframes earthyShift {
+  0% { background-position: 0% 0%; }
+  33% { background-position: 100% 50%; }
+  66% { background-position: 50% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* 4. Coral Breeze - Soft and inviting */
+.bg-coral-breeze {
+  background: var(--gradient-coral-dream);
+  position: relative;
+}
+
+.bg-coral-breeze::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--warm-mesh-2);
+  animation: gentleBreeze 15s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes gentleBreeze {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+/* 5. Warm Minimalist - Clean with warm undertones */
+.bg-warm-minimal {
+  background: var(--gradient-warm-minimal);
+  position: relative;
+}
+
+.bg-warm-minimal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(255, 154, 86, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 20% 80%, rgba(225, 112, 85, 0.08) 0%, transparent 25%);
+  pointer-events: none;
+}
+
+/* 6. Rustic Charm - Deep, rich warm tones */
+.bg-rustic-charm {
+  background: var(--gradient-rustic);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-rustic-charm::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  background-image: var(--warm-diagonal);
+  background-size: 40px 40px;
+  animation: rusticTexture 30s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rusticTexture {
+  0% { transform: rotate(0deg) translateX(0); }
+  100% { transform: rotate(360deg) translateX(20px); }
+}
+
+/* 7. Golden Hour - Soft, ethereal warm light */
+.bg-golden-hour {
+  background: var(--warm-mesh-1);
+  position: relative;
+}
+
+.bg-golden-hour::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 50% 0%, rgba(255, 234, 167, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 100% 100%, rgba(255, 107, 107, 0.2) 0%, transparent 50%);
+  animation: goldenShimmer 12s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes goldenShimmer {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* ======= WARM FLOATING ELEMENTS ======= */
+
+.warm-floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(25px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.warm-floating-circle.coral {
+  background: rgba(255, 107, 107, 0.15);
+}
+
+.warm-floating-circle.peach {
+  background: rgba(255, 179, 167, 0.12);
+}
+
+.warm-floating-circle.gold {
+  background: rgba(253, 203, 110, 0.1);
+}
+
+.warm-floating-circle.large {
+  width: 320px;
+  height: 320px;
+  animation: warmFloat-slow 22s ease-in-out infinite;
+}
+
+.warm-floating-circle.medium {
+  width: 180px;
+  height: 180px;
+  animation: warmFloat-medium 16s ease-in-out infinite;
+}
+
+.warm-floating-circle.small {
+  width: 90px;
+  height: 90px;
+  animation: warmFloat-fast 12s ease-in-out infinite;
+}
+
+.warm-floating-circle.top-right {
+  top: 8%;
+  right: 12%;
+}
+
+.warm-floating-circle.bottom-left {
+  bottom: 15%;
+  left: 8%;
+}
+
+.warm-floating-circle.center-left {
+  top: 45%;
+  left: 5%;
+}
+
+.warm-floating-circle.top-center {
+  top: 20%;
+  left: 45%;
+}
+
+@keyframes warmFloat-slow {
+  0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
+  25% { transform: translateY(-25px) translateX(15px) rotate(3deg); }
+  50% { transform: translateY(-10px) translateX(-20px) rotate(-2deg); }
+  75% { transform: translateY(20px) translateX(10px) rotate(4deg); }
+}
+
+@keyframes warmFloat-medium {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(6deg); }
+}
+
+@keyframes warmFloat-fast {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(-12px) translateX(12px); }
+  66% { transform: translateY(8px) translateX(-8px); }
+}
+
+/* ======= TEXT OVERLAY STYLES ======= */
+/* For better text readability on warm backgrounds */
+
+.warm-text-overlay {
+  background: rgba(45, 27, 27, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 2rem;
+  color: var(--warm-white);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.warm-text-light {
+  background: rgba(250, 247, 242, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 2rem;
+  color: var(--warm-dark);
+  border: 1px solid rgba(225, 112, 85, 0.2);
+}
+
+/* ======= RESPONSIVE ADJUSTMENTS ======= */
+
+@media (max-width: 768px) {
+  .warm-floating-circle.large {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .warm-floating-circle.medium {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .warm-floating-circle.small {
+    width: 60px;
+    height: 60px;
+  }
+}
