@@ -3,7 +3,7 @@ import styles from  "./App.module.css";
 import "./warm-aesthetic-backgrounds.css";
 import {About} from "./components/About/About.jsx";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Hero } from "./components/hero/hero";
+import {Hero}  from "./components/hero/Hero";
 import { Experience } from "./components/Experience/Experience.jsx";
 import { Projects } from "./components/Projects/Projects.jsx";
 import { MouseTrail } from "./components/MouseTrail/MouseTrail.jsx";
