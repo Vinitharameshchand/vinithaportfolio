@@ -1,0 +1,15 @@
+[
+    {
+        "role": "Intern-Software & App Development",
+        "organisation": "pinesphere",
+        "startdate":"feb, 2025",
+        "enddate":"present",
+        "experiences": ["• Completed a hands-on internship focused on full-stack development, UI/UX design, and real-time app integration.",
+            "• Worked on multiple projects, including a To-Do mobile app using React Native and authentication modules with React JS and Firebase.",
+            "• Designed user interfaces using Figma and developed responsive web layouts with HTML/CSS.",
+            "• Gained real-world experience with Git & GitHub for version control and collaboration.",
+            "• Integrated Firebase Realtime Database and Authentication API for backend functionalities.",
+            "• Participated in a company-hosted hackathon, secured 2nd place, and demonstrated strong problem-solving and teamwork skills."]  ,
+        "imageSrc":"history/pinesphere.png"
+    }
+]
