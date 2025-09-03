@@ -50,7 +50,7 @@ export const Hero = () => {
   return (
     <section className={Styles.container}>
       <div className={Styles.content}>
-        <h1 className={Styles.title}>HIII, I'm Vinitha</h1>
+        <p className={Styles.title}>HIII , I'm Vinitha</p>
         <p className={Styles.description}><i>Turning coffee ☕ into code <br></br>and ideas into apps 💻 . </i><br></br>~Always learner </p>
         <a href="mailto:vinitharameshchand@gmail.com" className={Styles.contactBtn}>
           Email Me
@@ -75,7 +75,8 @@ export const Hero = () => {
       </div>
 
       <img src="/assets/hero/heroImage.png" alt="It's my image" className={Styles.heroImage} />
-         
+      <img src='/assets/hero/heroImage2.png' alt="its again me" className={Styles.heroImage2} />
+      
 
       <div className={Styles.topBlur} />
       <div className={Styles.bottomBlur} />

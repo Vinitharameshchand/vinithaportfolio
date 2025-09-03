@@ -51,11 +51,21 @@
 }
 
 .heroImage {
-    width: 50%;
+    width: 40%;
     z-index: 1;
     position: relative;
     animation-name: floating;
-    animation-duration: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+.heroImage2 {
+     width: 80%;
+    z-index: 1;
+    position:relative;
+    animation-name: floating;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 

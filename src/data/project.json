@@ -1,7 +1,9 @@
 [
   {
     "title": "TO-DO LIST MOBILE APP",
-    "description": "Built a cross-platform mobile app with real-time data synchronization and intuitive user interface. • Integrated Firebase for user authentication and cloud-based task storage. • CRUD functionality (create, read, update, delete) implemented for daily task management.",
-    "skills": ["React Native", "JavaScript", "Firebase"]
+    "description": "Built a cross-platform mobile app with real-time data synchronization and intuitive user interface. Integrated Firebase for user authentication and cloud-based task storage. CRUD functionality (create, read, update, delete) implemented for daily task management.",
+    "skills": ["React Native", "JavaScript", "Firebase"],
+    "demo": "#",
+    "source": "#"
   }
 ]
